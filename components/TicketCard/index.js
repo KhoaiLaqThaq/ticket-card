@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import TinderCard from 'react-tinder-card'
+import TinderCard from './../react-tinder-card'
 import tickets from './tickets.json'
 
 const TicketCard = (props) => {
