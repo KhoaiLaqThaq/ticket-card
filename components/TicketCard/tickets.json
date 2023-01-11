@@ -1,0 +1,48 @@
+[
+    {
+        "id": 2,
+        "name": "Cả xới ai thấy mình Đẹp trai, Xinh gái nhất thì nốc nào!",
+        "type": "challenge"
+    },
+    {
+        "id": 3,
+        "name": "Bạn có thích ai trong đây không? Nếu có HÃY UỐNG MỘT LY ĐẦY và mạnh dạn nói: MÌNH THÍCH CẬU",
+        "type": "challenge"
+    },
+    {
+        "id": 4,
+        "name": "Miễn trừ một ly trong ba vòng",
+        "type": "save"
+    },
+    {
+        "id": 5,
+        "name": "Thơm má người bên trái, NẾU KHÔNG phạt một ly đầy",
+        "type": "challenge"
+    },
+    {
+        "id": 6,
+        "name": "Cả nhà cùng ĐỒN KHỞI",
+        "type": "challenge"
+    },
+    {
+        "id": 7,
+        "name": "Chọn một người chịu phạt cùng trong 3 vòng",
+        "type": "challenge"
+    },
+    {
+        "id": 8,
+        "name": "Nhắn tin cho crush tỏ tình hoặc một ly đầy",
+        "type": "challenge"
+    },
+    {
+        "id": 9,
+        "name": "Uống một ly nếu bạn đã bị cắm sừng",
+        "type": "challenge"
+    },
+    
+    {
+        "id": 100,
+        "name": "Chơi nào",
+        "type": "challenge"
+    }
+]
