@@ -39,7 +39,46 @@
         "name": "Uống một ly nếu bạn đã bị cắm sừng",
         "type": "challenge"
     },
-    
+    {
+        "id": 10,
+        "name": "Bậc Thầy sang chảnh → Outfit nặng tiền nhất thì làm liền một ly",
+        "type": "challenge"
+    },
+    {
+        "id": 11,
+        "name": "Khí khái hiền nhân → Ai đeo kính uống một ly",
+        "type": "challenge"
+    },
+    {
+        "id": 12,
+        "name": "Bốn phương lạ quá! → mù đường giai đoạn nào cũng lên một chén",
+        "type": "challenge"
+    },
+    {
+        "id": 13,
+        "name": "Tự tin khoe cá tính → Nhảy sexy dance cho ai đó trong 15s hoặc uống một ly",
+        "type": "lucky"
+    },
+    {
+        "id": 14,
+        "name": "Nắm bắt cơ hội → Uống một lý hoặc gửi crush tấm hình đáng yêu nhất của mình",
+        "type": "lucky"
+    },
+    {
+        "id": 15,
+        "name": "Ô tê tê lô cồ bờ ren → lần lượt kể tên localbrand ai bí thí hai ly",
+        "type": "challenge"
+    },
+    {
+        "id": 16,
+        "name": "Luật lệ tối cao → uống một ly nếu đã từng bị phạt vi phạm giao thông",
+        "type": "challenge"
+    },
+    {
+        "id": 17,
+        "name": "Miễn nhiễm cho phép từ chối một ly phạt bất kỳ",
+        "type": "save"
+    },
     {
         "id": 100,
         "name": "Chơi nào",

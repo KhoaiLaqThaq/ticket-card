@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
+import Link from 'next/link';
+
 import styles from '../styles/Home.module.css'
-import TicketCard from './../components/TicketCard/index';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,11 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.center}>
-          <div>
-            <TicketCard></TicketCard>
-          </div>
-        </div>
+        <Link href="/ticket/ticket-list">Chơi ngay!</Link>
       </main>
     </>
   )

@@ -1,16 +1,26 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux'
+import _ from 'lodash';
+
 import TinderCard from './../react-tinder-card'
-import tickets from './tickets.json'
+import { getAll } from './../../store/actions/ticketCardAction'
 
-const TicketCard = (props) => {
-
-  const [ticket, setTicket] = useState([]);
+const TicketCard = () => {
+  const dispatch = useDispatch();
+  const tickets = useSelector((state) => state.ticketReducer.tickets);
+  const swipeButtonType = useSelector((state) => state.swipeReducer.action)
   // const [lastDirection, setLastDirection] = useState("");
   
   useEffect(() => {
-    const ticketList = tickets.reverse();
-    setTicket(ticketList);
+    dispatch(getAll())
   }, [])
+
+  useEffect(() => {
+    if (_.eq(swipeButtonType, 'refresh')) {
+      dispatch(getAll())
+      dispatch({type: 'none'})
+    }
+  }, [swipeButtonType])
 
   function setBackground(type) {
     switch(type) {
@@ -27,7 +37,7 @@ const TicketCard = (props) => {
     console.log("removing: " + nameToDelete);
     // setLastDirection(direction)
   }
-
+ 
   const outOfFrame = (name) => {
     console.log(name + " left the screen");
   }
@@ -35,24 +45,24 @@ const TicketCard = (props) => {
   return (
     <div className="tinderCards">
       <div className="tinderCards__cardContainer">
-        {ticket && ticket.map((t) => (
-          <TinderCard
-            className="swipe"
-            key={t.id}
-            preventSwipe={["up", "down"]}
-            onSwipe={(dir) => swiped(dir, t.name)}
-            onCardLeftScreen={() => outOfFrame(t.name)}
-          >
-            <div
-              className="card flex-center-vertical"
-              style={{ backgroundColor: setBackground(t.type)}}
+        {tickets && tickets.map((t) => (
+            <TinderCard
+              className="swipe"
+              key={t.id}
+              preventSwipe={["up", "down"]}
+              onSwipe={(dir) => swiped(dir, t.name)}
+              onCardLeftScreen={() => outOfFrame(t.name)}
             >
-              <div className="card-body">
-                <p className="name noselect">{t.name}</p>
+              <div
+                className="card flex-center-vertical"
+                style={{ backgroundColor: setBackground(t.type)}}
+              >
+                <div className="card-body">
+                  <p className="name noselect">{t.name}</p>
+                </div>
               </div>
-            </div>
-          </TinderCard>
-        ))}
+            </TinderCard>
+          ))}
       </div>
     </div>
   )

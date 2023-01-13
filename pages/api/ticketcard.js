@@ -1,0 +1,6 @@
+import tickets from './../../components/TicketCard/tickets.json';
+
+export default function handler(req, res) {
+  res.status(200).json(tickets)
+}
+  
